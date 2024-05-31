@@ -1,15 +1,15 @@
 #!/bin/bash
 
-echo "Input the SSL Certificate code below and press CTRL+D:"
+echo "Input the SSL Certificate code below and press CTRL+D twice:"
 	cat > inputcert.crt
 	(perl -MURI::Escape -ne 'print uri_escape($_);' inputcert.crt) > encrypted.crt
 	echo -e "\n"
-echo "Input the Private Key code below and press CTRL+D:"
+echo "Input the Private Key code below and press CTRL+D twice:"
 	cat > inputkey.key
 	(perl -MURI::Escape -ne 'print uri_escape($_);' inputkey.key) > encrypted.key
 	echo -e "\n"
 
-echo "Input the list of domains/subdomains (one domain per line) and press CTRL+D:"
+echo "Input the list of domains/subdomains (one domain per line) and press CTRL+D twice:"
     cat > domains.txt
     echo -e "\n" >> domains.txt
     echo -e "\n"
